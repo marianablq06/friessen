@@ -1,0 +1,23 @@
+extends _layout.jade
+block vars
+	- var bodyClass = 'home'
+block content
+	section.single-category
+		.header-image(style="background-image:url(./img/fachaletas.jpg);")
+			h3 fachaletas
+		.marcas-grid
+			.col13
+				a(href="./perdura-stone")
+					.container
+						img(src="img/marcas/perdura-stone.jpg").marca
+						img(src="img/marcas/perdura-stone.png").logo
+			.col13
+				a(href="./stona")
+					.container
+						img(src="img/marcas/stona.jpg").marca
+						img(src="img/marcas/stona.png").logo
+			.col13
+				a(href="./castel")
+					.container
+						img(src="img/marcas/castel.jpg").marca
+						img(src="img/marcas/castel.png").logo

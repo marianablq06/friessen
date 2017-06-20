@@ -1,0 +1,148 @@
+.button{
+	min-width: 150px;
+	max-width: 250px;
+	display: block;
+	margin: 1em;
+	padding: 1em 2em;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	cursor:pointer;
+	&:focus{
+		outline: none;
+	}
+}
+
+.button > span{
+	vertical-align:middle;
+}
+
+
+/**botón de cotizar para la vista del producto solo**/
+
+.button.quote{
+
+	color:$pink;
+	border:2px solid $pink;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	overflow: hidden;
+	padding: 0;
+	width: 230px;
+	&:hover{
+		color:$white;
+	}
+	span{
+		vertical-align: middle;
+	}
+	&:before{
+		content: attr(data-text);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $pink;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+/**este es para cuando lo quieres quitar de la cotización,
+le agregas la clase added y le cambias el texto por eliminar o no sé **/
+
+.button.quote.added{
+	color:$white;
+	background:$pink;
+	&:before{
+		background:$white;
+		color:$pink;
+
+	}
+}
+
+.quote > span{
+	display:block;
+}
+
+.quote::before,
+.quote > span{
+
+	padding: 1em 0em;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+
+}
+.quote:hover::before{
+
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.quote:hover > span {
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+/**botón de wishlist para la vista de catálogo*/
+
+.wishlist{
+
+	border:none;
+	background:transparent;
+	outline: none;
+
+	i{
+		color:$pink;
+		font-size: 1.2rem;
+		margin-top: .2rem;
+		position:relative;
+		transition: all .2s ease-in-out;
+		 -webkit-transition: all .2s ease-in-out; /* Safari 3.1 to 6.0 */
+		cursor: pointer;
+		outline: none;
+		&:hover{
+
+			&:after{
+				
+				font-family:'Source Sans Pro Light';
+				position:absolute;
+				left:30px;
+			}
+		}
+		&:active{
+			outline: none;
+		}
+	}
+	&:hover{
+		-webkit-animation: wishlist 0.3s forwards;
+		animation: wishlist 0.3s forwards;
+	}
+}
+.wishlist i:hover:after{
+	content:' Cotizar';
+}
+.wishlist.added i:hover:after{
+	content:' Eliminar';
+}
+@-webkit-keyframes wishlist {
+	60% {
+		-webkit-transform: scale3d(0.8, 0.8, 1);
+		transform: scale3d(0.8, 0.8, 1);
+	}
+	85% {
+		-webkit-transform: scale3d(1.1, 1.1, 1);
+		transform: scale3d(1.1, 1.1, 1);
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}

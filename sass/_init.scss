@@ -1,0 +1,160 @@
+
+@font-face{
+font-family:'Myriad';
+src: url('../fonts/MyriadPro-Regular.otf') format('opentype');
+}
+
+
+@font-face{
+font-family:'Open Sans Bold';
+src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face{
+font-family:'Franklin Gothic';
+src: url('../fonts/Franklin Gothic Book.ttf') format('truetype');
+}
+
+@font-face{
+font-family:'Corbel Bold';
+src: url('../fonts/Corbel Bold.ttf') format('truetype');
+}
+
+@font-face{
+font-family:'Corbel';
+src: url('../fonts/Corbel.ttf') format('truetype');
+}
+
+
+
+
+//colors
+$white:#fff;
+$green:#808028;
+$gray:#4D4D4D;
+
+//no
+$light:#F2F2F2;
+
+$gray2:#808080;
+$pink:#E5007E;
+$blue: blue;
+$red: red;
+$black:#000000;
+//spaces
+$space:100px;
+//mixins
+@mixin cover(){
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin spacer($x){
+	height:$space*$x;
+	clear:both;
+
+}
+@mixin translate($x,$y){
+
+  transform: translate($x,$y);
+  -ms-transform: translate($x,$y);
+  -webkit-transform:translate($x,$y);
+}
+@mixin translateX($x){
+  transform: translateX($x);
+  -ms-transform: translateX($x);
+  -webkit-transform:translateX($x);
+}
+
+@mixin translateY($x){
+  transform: translateY($x);
+  -ms-transform: translateY($x);
+  -webkit-transform:translateY($x);
+}
+@mixin setBgColorAndHover($baseColor){
+	 background-color: $baseColor;
+    &:hover{
+          background-color: darken($baseColor, 5%);
+    }
+}
+
+
+@mixin placeholderInput($color,$font,$spacing,$fontSize){
+  input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+    font-family: $font;
+    letter-spacing: $spacing;
+    font-size: $fontSize;
+  }
+  input::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+    font-family: $font;
+    letter-spacing: $spacing;
+    font-size: $fontSize;
+  }
+  input:-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+    font-family: $font;
+    letter-spacing: $spacing;
+    font-size: $fontSize;
+  }
+  input:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-family: $font;
+    letter-spacing: $spacing;
+    font-size: $fontSize;
+  }
+
+}
+
+@mixin placeholderTextarea($color,$font,$spacing,$fontSize){
+  textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+    font-family: $font;
+    letter-spacing: $spacing;
+    font-size: $fontSize;
+  }
+  textarea::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+    font-family: $font;
+    letter-spacing: $spacing;
+    font-size: $fontSize;
+  }
+  textarea:-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+    font-family: $font;
+    letter-spacing: $spacing;
+    font-size: $fontSize;
+  }
+  textarea:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-family: $font;
+    letter-spacing: $spacing;
+    font-size: $fontSize;
+  }
+
+}
+
+html, body{
+
+	height:100%;
+	width:100%;
+	margin:0;
+  background-color:$white;
+	a,a:hover,a:visited{
+		text-decoration: none;
+    color:inherit;
+
+
+	}
+
+}
+body{
+  font-size: 16px;
+}
+ul{line-height:200%;}
+html{font-size:100%;} 
+@media(min-width:60em){html{font-size: 100%}}
+* {margin:0;padding:0;}

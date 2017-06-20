@@ -1,0 +1,18 @@
+extends _layout.jade
+block vars
+	- var bodyClass = 'home'
+block content
+	section.single-category
+		.header-image(style="background-image:url(./img/tejas-header.jpg);")
+			h3 tejas
+		.marcas-grid
+			.col13
+				a(href="./chosa")
+					.container
+						img(src="img/marcas/chosa.jpg").marca
+						img(src="img/marcas/chosa.png").logo
+			.col13
+				a(href="./mextile")
+					.container
+						img(src="img/marcas/mextile.jpg").marca
+						img(src="img/marcas/mextile.png").logo

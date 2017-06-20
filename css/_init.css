@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Myriad';
+  src: url("../fonts/MyriadPro-Regular.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Franklin Gothic';
+  src: url("../fonts/Franklin Gothic Book.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Corbel Bold';
+  src: url("../fonts/Corbel Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Corbel';
+  src: url("../fonts/Corbel.ttf") format("truetype"); }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #fff; }
+  html a, html a:hover, html a:visited, body a, body a:hover, body a:visited {
+    text-decoration: none;
+    color: inherit; }
+
+body {
+  font-size: 16px; }
+
+ul {
+  line-height: 200%; }
+
+html {
+  font-size: 100%; }
+
+@media (min-width: 60em) {
+  html {
+    font-size: 100%; } }
+
+* {
+  margin: 0;
+  padding: 0; }

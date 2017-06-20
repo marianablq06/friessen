@@ -1,0 +1,75 @@
+extends _layout.jade
+block scriptsHead
+	link(rel="stylesheet", type="text/css", href="js/lightbox/css/lightbox.min.css" )
+block vars
+	- var bodyClass = 'home'
+block content
+	section.proyectos
+		.header-image(style="background-image:url(img/proyectos.jpg);")
+			h3 Proyectos
+		.separator
+		.proyectos_inner
+			.proyecto
+				a(href="./img/proyectos/circulofrances1.png" data-lightbox="image-1" )
+					img(src="./img/proyectos/circulofrances1.png")
+					h4 círculo francés
+				a(href="./img/proyectos/circulofrances2.jpg" data-lightbox="image-1")
+				a(href="./img/proyectos/circulofrances3.jpg" data-lightbox="image-1")
+				a(href="./img/proyectos/circulofrances4.jpg" data-lightbox="image-1")
+			.proyecto
+				a(href="./img/proyectos/auditoriotelmex1.jpg" data-lightbox="telmex" )
+					img(src="./img/proyectos/auditoriotelmex1.jpg")
+					h4 auditorio telmex
+				a(href="./img/proyectos/auditoriotelmex2.jpg" data-lightbox="telmex" )
+				a(href="./img/proyectos/auditoriotelmex3.jpg" data-lightbox="telmex" )
+				a(href="./img/proyectos/auditoriotelmex4.jpg" data-lightbox="telmex" )
+			.proyecto
+				a(href="./img/proyectos/cabanna1.jpg" data-lightbox="cabanna" )
+					img(src="./img/proyectos/cabanna1.jpg")
+					h4 cabanna
+				a(href="./img/proyectos/cabanna2.png" data-lightbox="cabanna" )
+				a(href="./img/proyectos/cabanna3.png" data-lightbox="cabanna" )
+				a(href="./img/proyectos/cabanna4.jpg" data-lightbox="cabanna" )
+			.proyecto
+				a(href="./img/proyectos/estadiovictoria1.jpg" data-lightbox="estadio-victoria" )
+					img(src="./img/proyectos/estadiovictoria1.jpg")
+					h4 estadio victoria
+				a(href="./img/proyectos/estadiovictoria2.jpg" data-lightbox="estadio-victoria" )
+				a(href="./img/proyectos/estadiovictoria3.jpg" data-lightbox="estadio-victoria" )
+				a(href="./img/proyectos/estadiovictoria4.jpg" data-lightbox="estadio-victoria" )
+			.proyecto
+				a(href="./img/proyectos/palcco1.jpg" data-lightbox="palcco" )
+					img(src="./img/proyectos/palcco1.jpg")
+					h4 palcco guadalajara
+				a(href="./img/proyectos/palcco2.jpg" data-lightbox="palcco" )
+				a(href="./img/proyectos/palcco3.jpg" data-lightbox="palcco" )
+			.proyecto
+				a(href="./img/proyectos/torrecountry1.jpg" data-lightbox="torre" )
+					img(src="./img/proyectos/torrecountry1.jpg")
+					h4 torre country
+				a(href="./img/proyectos/torrecountry2.jpg" data-lightbox="torre" )
+				a(href="./img/proyectos/torrecountry3.jpg" data-lightbox="torre" )
+				a(href="./img/proyectos/torrecountry4.jpg" data-lightbox="torre" )
+			.proyecto
+				a(href="./img/proyectos/torremadol1.jpg" data-lightbox="torre-madol" )
+					img(src="./img/proyectos/torremadol1.jpg")
+					h4 torre madol
+				a(href="./img/proyectos/torremadol2.jpg" data-lightbox="torre-madol" )
+			.proyecto
+				a(href="./img/proyectos/trompomagico1.jpg" data-lightbox="trompo-magico" )
+					img(src="./img/proyectos/trompomagico1.jpg")
+					h4 trompo mágico
+				a(href="./img/proyectos/trompomagico2.jpg" data-lightbox="trompo-magico" )
+				a(href="./img/proyectos/trompomagico3.jpg" data-lightbox="trompo-magico" )
+			.proyecto
+				a(href="./img/proyectos/universidadka1.jpg" data-lightbox="universidad" )
+					img(src="./img/proyectos/universidadka1.jpg")
+					h4 UNIVERSIDAD DE ARKANSAS QUERÉTARO
+				a(href="./img/proyectos/universidadka2.jpg" data-lightbox="universidad" )
+				a(href="./img/proyectos/universidadka3.jpg" data-lightbox="universidad" )
+				a(href="./img/proyectos/universidadka4.jpg" data-lightbox="universidad" )
+				
+
+
+block scriptsFooter
+	script(type="text/javascript", src="js/lightbox/js/lightbox.min.js")

@@ -1,0 +1,24 @@
+extends _layout.jade
+block vars
+	- var bodyClass = 'home'
+block content
+	section.single-category
+		.header-image(style="background-image:url(./img/adhesivos-header.jpg);")
+			h3 adhesivos
+		.marcas-grid
+			.col13
+				a(href="./niasa")
+					.container
+						img(src="img/marcas/niasa.jpg").marca
+						a(href="./niasa")
+							img(src="img/marcas/niasa.png").logo
+			.col13
+				a(href="./perdura")
+					.container
+						img(src="img/marcas/perdura-1.jpg").marca
+						img(src="img/marcas/perdura.png").logo
+			.col13
+				a(href="./mapei")
+					.container
+						img(src="img/marcas/mapei.jpg").marca
+						img(src="img/marcas/mapei.png").logo

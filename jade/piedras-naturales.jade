@@ -1,0 +1,19 @@
+extends _layout.jade
+block vars
+	- var bodyClass = 'home'
+block content
+	section.single-category
+		.header-image(style="background-image:url(./img/piedras-naturales-header.jpg);")
+			h3 piedras naturales
+		p.description.center Vendemos diferentes tipos de mármol, canteras, lajas y rajuelas.
+		.marcas-grid.flex
+			.col13
+				a(href="./castel")
+					.container
+						img(src="img/marcas/castel.jpg").marca
+						img(src="img/marcas/castel.png").logo
+			.col13
+				a(href="./stona")
+					.container
+						img(src="img/marcas/stona.jpg").marca
+						img(src="img/marcas/stona.png").logo

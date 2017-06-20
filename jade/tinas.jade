@@ -1,0 +1,23 @@
+extends _layout.jade
+block vars
+	- var bodyClass = 'home'
+block content
+	section.single-category
+		.header-image(style="background-image:url(./img/tinas-bano.jpg);")
+			h3 tinas
+		.marcas-grid
+			.col13
+				a(href="./plasbar")
+					.container
+						img(src="img/marcas/plasbar.jpg").marca
+						img(src="img/marcas/plasbar.png").logo
+			.col13
+				a(href="./victoria-albert")
+					.container
+						img(src="img/marcas/victoria-albert.jpg").marca
+						img(src="img/marcas/victoria-albert.png").logo
+			.col13
+				a(href="./jacuzzi")
+					.container
+						img(src="img/marcas/jacuzzi.jpg").marca
+						img(src="img/marcas/jacuzzi.png").logo

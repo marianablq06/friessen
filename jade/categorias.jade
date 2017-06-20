@@ -1,0 +1,97 @@
+extends _layout.jade
+block vars
+	- var bodyClass = 'home'
+block content
+	section.categorias
+		.header-image
+			h3 Categorías
+	section.masonry-categories
+		.grid
+			.grid-sizer
+			.grid-item.grid-item--width2
+				a(href="./recubrimientos.html")
+					.container
+						img(src="img/categorias/recubrimientos.jpg")
+						h2 
+							a(href="./recubrimientos.html") recubrimientos
+			.grid-item
+				a(href="./griferia.html")
+					.container
+						img(src="img/categorias/griferias.jpg")
+						h2 
+							a(href="./griferia.html") grifería
+			.grid-item
+				a(href="./adhesivos.html")
+					.container
+						img(src="img/categorias/pisos.jpg")
+						h2 
+							a(href="./adhesivos.html") adhesivos
+			.grid-item
+				a(href="./muebles-bano.html")
+					.container
+						img(src="img/categorias/muebles-bano.jpg")
+						h2 
+							a(href="./muebles-bano.html")
+								|muebles
+								br
+								|de baño
+			.grid-item
+				a(href="./tejas.html")
+					.container
+						img(src="img/categorias/tejas.jpg")
+						h2 
+							a(href="./tejas.html") tejas
+			.grid-item
+				a(href="./fachaletas.html")
+					.container
+						img(src="img/categorias/fachaletas.jpg")
+						h2 
+							a(href="./fachaletas.html") fachaletas
+			.grid-item.grid-item--width2
+				a(href="./tinas.html")
+					.container
+						img(src="img/categorias/tinas.jpg")
+						h2 
+							a(href="./tinas.html") tinas
+			.grid-item
+				a(href="./adoquines.html")
+					.container
+						img(src="img/categorias/adoquin.jpg")
+						h2 
+							a(href="./adoquines.html") adoquines
+			.grid-item.grid-item--width2
+				a(href="./piedras-naturales.html")
+					.container
+						img(src="img/categorias/piedras_naturales.jpg")
+						h2 
+							a(href="./piedras-naturales.html") piedras naturales
+			.grid-item
+				a(href="./mosaicos.html")
+					.container
+						img(src="img/categorias/mosaicos.jpg")
+						h2 
+							a(href="./mosaicos.html") mosaicos
+
+
+
+	.clear
+block scriptsFooter
+	script(type="text/javascript", src="js/masonry.js")
+	script(type="text/javascript", src="js/imagesLoaded.js")
+	
+	script.
+		$(document).ready(function(){
+		$('.grid').imagesLoaded(function(){
+			
+			$('.grid').masonry({
+			// options
+				itemSelector: '.grid-item',
+				columnWidth: '.grid-sizer',
+				percentPosition: true
+			});
+
+		});
+			
+
+		});
+		

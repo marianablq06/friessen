@@ -1,0 +1,337 @@
+.message{
+	display:none;
+}
+section.quien-es-friessen{
+	overflow:auto;
+	padding: 7% 0;
+
+	.col12{
+		@include col(1/2,$cycle:2,$gutter:0);
+	}
+
+	.colContainer{
+
+		width: 100%;
+		display: inline-flex;
+		display: -webkit-inline-flex;
+	
+		.container-img{
+			@include col(.58075052,$gutter:0);
+
+			img{
+				max-width: 100%;
+			}
+		}
+		.container-description{
+			@include col(.41924948,$gutter:0);
+			position:relative;
+			.description{
+				/*z-index: 2;
+				position: absolute;
+				left: -30%;
+				width: 80%;
+				top: 18%;
+				padding: 20% 10% 20% 34%;
+				text-align: left;*/
+
+			}
+		}
+	}
+
+}
+.container-description .description{
+	padding: 23% 0;
+    position: absolute;
+    z-index: 2;
+    left: -30%;
+    top: 20%;
+    max-width: 100%;
+
+	h2{
+		font-family: Corbel Bold;
+		color:$green;
+		text-transform: uppercase;
+    	font-size: 2.5rem;
+    	@media screen and (min-width:1824px){
+    		font-size: 3rem;
+    	}
+
+	}
+	.separator{
+		width: 100%;
+		height: 1px;
+    	margin: 5px 0 20px 0;
+		background:$green;
+		@media screen and (min-width:1824px){
+			margin: 35px 0;
+		}
+	}
+
+	p{
+		text-align: justify!important;
+		font-family:'Myriad';
+		font-size: 1rem;
+		@media screen and (min-width:1824px){
+			font-size: 1.7rem;
+		}
+	}
+
+	.text{
+		max-width: 54%;
+		margin: 0 auto;
+		padding-left: 21%;
+	}
+
+}
+.title-square{
+
+
+	margin-top:$space*.5;
+
+	h2{
+		max-width: 213px;
+		border: 1px solid $green;
+		padding: 105.5px 30px;
+    	text-align: left;
+		margin: 0 auto;
+		line-height: 1.5rem;
+		font-family: 'Open Sans Bold';
+		color: $green;
+		font-size: 2rem;
+		text-transform: uppercase;
+		span{
+			font-size: 1rem;
+		}
+		.separator{
+			background: $green;
+			height: 1px;
+			width: 3rem;
+			margin-top: 15px;
+		}
+	}
+
+
+
+}
+.wrapper_friessen{
+	//position:relative;
+	.container{
+		max-width: 50vw;
+		margin:0 auto;
+		text-align: justify;
+		border: 4px solid #808028;
+    	padding: 10px 25px;
+    	margin-bottom: 100px;
+    	@media screen and (max-width:768px){
+    		max-width: 80vw;
+    	}
+	}
+	.inner_friessen{
+		padding:40px;
+		h2{
+			line-height: 2.5rem;
+			font-family: 'Open Sans Bold';
+			color: $green;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		p{
+			font-family:'Myriad';
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+		ul{
+			list-style: none;
+			font-family:'Myriad';
+			font-size: 1rem;
+			li{
+				position:relative;
+				padding-left:25px;
+				color: #4D4D4D;
+				&:before{
+					position:absolute;
+					content:'';
+					background:$green;
+					width: 5px;
+					height: 5px;
+					border-radius:100%;
+					left:7px;
+					top:12px;
+				}
+			}
+		}
+		.imgContainerRight img{
+			max-width: 49vw;
+		}
+	}
+	/*.wrapper_mision{
+		position: absolute;
+    	top: 17%;
+    	border: 4px solid #808028;
+    	padding: 10px 25px;
+    	.inner_mision{
+    		padding: 20px 14px;
+    	}
+	}*/
+	.separator{
+		height: 10px;
+	}
+}
+@media screen and (min-width:480px) and (max-width:850px){
+	.wrapper_friessen .inner_friessen{
+		padding:0;
+	}	
+	.wrapper_friessen{
+		margin-top: 100px;
+	}
+	.wrapper_friessen .wrapper_mision{
+		position:initial;
+	}
+	.imgContainerRight{
+		display: none;
+	}
+}
+@media screen and (max-width:480px){
+	.wrapper_friessen{
+		.inner_friessen{
+			padding: 0;
+			.imgContainerRight{
+				display: none;
+			}
+			ul{
+				width: 56%;
+			}
+		}
+		.wrapper_mision{
+			position:initial;
+			p span.rwd-line{
+				display: initial;
+			}
+		}
+	}
+	
+}
+@media screen and (max-width:1150px){
+	.wrapper_mision{
+		background:white;
+	}
+}
+
+
+section.contacto{
+	overflow:auto;
+	padding:$space*1.5 $space*.3;
+	background: url('../img/contacto.jpg') no-repeat center center fixed; 
+	@include cover();
+
+	.col23{
+		@include col(2/3,$gutter:0);
+	}
+	.col13{
+		@include col(1/3,$gutter:0);
+	}
+	h3{
+		font-size:2.5rem;
+		font-family: 'Corbel Bold';
+		text-transform: uppercase;
+		color:$green;
+		margin-bottom: $space*.3;
+		margin-top: 40px;
+	}
+	span{
+		color:$white;
+		font-family: 'Myriad';
+    	letter-spacing: 1px;
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	form{
+		padding: 2% 20%;
+		@include placeholderInput(#a0a1a5,'Corbel',1px,1rem);
+		@include placeholderTextarea(#a0a1a5,'Corbel',1px,1rem);
+
+		input,textarea{
+			display:block;
+			width: 100%;
+			border:none;
+			border-bottom:1px solid  #808080;
+			padding: 10px;
+    		margin-bottom: 10px;
+    		background:transparent;
+    		font-family: 'Myriad';
+    		color:$white;
+    		font-size: 1rem;
+		}	
+		textarea{
+			height: 200px;
+		}
+
+		.submit{
+			float:right;
+		    max-width: 100px;
+		    border: 2px solid $green;
+		    background:none;
+		    margin-top: 20px;
+		    cursor:pointer;
+		    text-transform: uppercase;
+		    color:$green;
+			padding: 5px;
+			letter-spacing: 1px;
+			line-height: 1rem;
+
+		    &:hover{
+		    	background: darken($green, 5);
+		    	color:white;
+		    }
+
+		}
+
+
+	}
+	.social-media li{
+		padding:5px;
+		i{
+			font-size: 2rem;
+			color: white;
+			&:hover{
+				color:$green;
+			}
+		}
+	}
+
+}
+
+section.map{
+	overflow:auto;
+	#map{
+
+		height: 400px;
+	}
+}
+
+.nosotros-1{
+	animation-name: example;
+    animation-duration: 6s;
+}
+p.center.tag{
+	color:$green;
+}
+@keyframes example {
+    /*0%   {    margin-top: 20%;}
+    25%  {    margin-top: 15%;}
+    50%  {    margin-top: 10%;}
+    75%  {    margin-top: 5%;}
+    100% {margin-top: 0%;}*/
+    from{ margin-top: 60%;}
+    to{margin-top: 0%;}
+}
+
+/* The element to apply the animation to
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+   
+} */

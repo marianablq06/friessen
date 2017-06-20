@@ -1,0 +1,137 @@
+doctype html(lang='es')
+head
+	meta(charset="UTF-8")
+	link(rel="stylesheet", type="text/css", href="css/font-awesome.min.css" )
+	link(rel="stylesheet", type="text/css", href="css/styles.css?1.0.0" )
+	meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	script(type="text/javascript").
+		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+		$.src="https://v2.zopim.com/?4ruwLGBydTHSVbVoIpBMTF3nqHOcCN2e";z.t=+new Date;$.
+		type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+	block scriptsHead
+	block vars
+		- var bodyClass = ''
+
+body(class=(bodyClass || ""))
+	.wrap#wrap
+
+		header.top-header.fixed
+			//-.top
+				ul
+					li
+						a(href="#")
+							i(class="fa fa-instagram" aria-hidden="true")
+					li
+						a(href="#")
+							i(class="fa fa-facebook-square" aria-hidden="true")
+
+			.navBar
+				nav
+					.logo
+						a(href="./")
+							img(src="img/friessen.svg")#logo
+					.menu
+						ul
+							li
+								a(href="./") inicio
+
+							li
+								a(href="./#nosotros") nosotros
+							li.has-submenu
+								a(href="#") catálogo
+								ul.submenu
+									li
+										a(href="./marcas.html") marcas
+									li
+										a(href="./categorias.html") categorías
+							li
+								a(href="./proyectos") proyectos
+							li
+								a(href="http://friessen.mx/blog") blog
+							li
+								a(href="./#contacto") contacto
+			.navMobile
+				nav.mobile
+					.logo
+						a(href="./")
+							img(src="img/christian_divat.svg")#logo
+		.header-mobile
+			nav.mobile
+				.logo-mobile
+					a(href="./")
+						img(src="img/friessen.svg")#logo
+				.icon
+				#nav-icon
+					span
+					span
+					span
+					span
+					span
+					span
+				.menu-mobile
+					ul
+						li
+							a(href="./") inicio
+
+						li
+							a(href="./#nosotros") nosotros
+						li.has-submenu
+							a(href="#") catálogo
+							ul.submenu
+								li
+									a(href="./marcas.html") marcas
+								li
+									a(href="./categorias.html") categorías
+						li
+							a(href="./proyectos") proyectos
+						li
+							a(href="http://friessen.mx/blog/") blog
+						li
+							a(href="./#contacto") contacto
+				
+
+
+		
+		block content
+	footer
+		.footerContainer
+
+			.col12
+				.copy
+					p  © 2017 Derechos reservados © FRIESSEN
+			.col12
+
+				.contacto
+					h3 Contacto
+					.separator
+
+					span Teléfonos
+					span (33) 3612-1076 
+					span (33) 3612-1077
+					br
+					span RAMON CORONA NO.681, SANTA ANITA
+
+					ul.social-media
+						li
+							a(href="#" target="_blank")
+								i(class="fa fa-instagram" aria-hidden="true")
+						li
+							a(href="#" target="_blank")
+								i(class="fa fa-facebook-official" aria-hidden="true")
+	.footer-mobile
+		h3 Contacto
+		.separator
+
+		span Teléfonos
+		span (33) 3612-1076 
+		span (33) 3612-1077
+		br
+		span RAMON CORONA NO.681, SANTA ANITA
+					
+
+	script(type="text/javascript", src="js/jquery.js")
+	script(type="text/javascript", src="js/custom.js?1.0.0")
+	block scriptsFooter
+	

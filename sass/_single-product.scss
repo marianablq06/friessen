@@ -1,0 +1,148 @@
+section.singleProductContainer{
+	.col12{
+		@include col(1/2,$gutter:0);
+		.product-info{
+			//padding: $space 20% $space*.3 0;
+			@include center(397px);
+			
+			padding-top:$space;
+			.name{
+				color:$pink;
+				font-family:'Source Sans Pro Light';
+				font-size: 2.5rem;
+				line-height: 3rem;
+			}
+			.category{
+				color:$gray;
+				font-family: 'Open Sans';
+				font-size: 1.2rem;
+				line-height: 3rem;
+			}
+			.description{
+				color:$gray;
+				font-family: 'Open Sans';
+				font-size: .8rem;
+				text-align: left;
+				line-height: 1.5rem;
+				text-transform: uppercase;
+
+			}
+			.line-separator{
+				height: 1px;
+				width: 100%;
+				background-color: $light;
+				margin: $space*.1 0;
+			}
+			div.colors{
+				margin-top:$space*.2;
+				display: -webkit-inline-flex;
+				display: inline-flex;
+				-webkit-flex-direction: row;
+				flex-direction: row;
+				-webkit-flex-wrap: nowrap;
+				flex-wrap: nowrap;
+				-webkit-justify-content: flex-start;
+				justify-content: flex-start;
+				width: 100%;
+				-webkit-align-items: center;
+				align-items: center;
+				h5{
+					text-transform: uppercase;
+					color:$gray;
+					font-family:'Open Sans Semibold';
+					margin-right: 3%;
+
+				}
+				ul.colors{
+					width: auto;
+				}
+			}
+			.cotizar{
+				margin-top: $space*.5;
+				input{
+					width: 100%;
+					background-color:$pink;
+					color:white;
+					font-family:'Open Sans Semibold';
+					border:none;
+					height: 50px;
+					text-transform:uppercase;
+					font-size: 1.2rem;
+					cursor: pointer;
+					&:hover{
+						background-color: darken($pink,20);
+					}
+				}
+			}
+		}
+		.singleProductContainer{
+			position:relative;
+			.back{
+				position:absolute;
+				top:10px;
+				left:50%;
+				z-index:1;
+				width:100%;
+				a{
+					img{
+						max-width: 100px;
+						display: inline-block;
+						margin-right: 20px;
+						-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    					filter: grayscale(100%);
+					}
+					font-family:'Open Sans Semibold';
+					color:$gray;
+					text-transform: uppercase;
+					font-size: .8rem;
+					&:hover{
+						img{
+							-webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+	    					filter: grayscale(0%);
+    					}
+    					color:$pink;
+					}
+				}
+			}
+			.single-product{
+				/*.slick-prev:before{
+					content: '<';
+				}
+				.slick-next:before{
+					content: '>';
+				}*/
+				.slick-prev:before, .slick-next:before{
+					color:$pink;
+				}
+				.slick-next{
+					top:20px;
+					right: 10px;
+					z-index: 1;
+				}
+				.slick-prev{
+					top: 20px;
+					right: 50px;
+					left: 90%;
+    				z-index: 1;
+				}
+			}
+			.single-product,.product-gallery{
+				.slick-slide{
+					img{
+						max-width: 100%;
+					}
+				}
+
+			}
+			.product-gallery{
+				position:absolute;
+				top:0px;
+				right:0px;
+				max-width: 100px;
+				.slick-list{
+					padding:20px 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,167 @@
+extends _layout.jade
+block scriptsHead
+	link(rel="stylesheet", type="text/css", href="css/slick-theme.css" )
+	link(rel="stylesheet", type="text/css", href="css/slick.css" )
+	
+block vars
+	- var bodyClass = 'home'
+block content
+	section.home
+		.top
+			.hero
+				div.slide-banner
+					img(src="img/slider/Foto1.png")
+				div.slide-banner
+					img(src="img/slider/Foto2.png")
+				div.slide-banner
+					img(src="img/slider/Foto3.png")
+				div.slide-banner
+					img(src="img/slider/Foto4.png")
+				div.slide-banner
+					img(src="img/slider/Foto5.png")
+				div.slide-banner
+					img(src="img/slider/Foto6.png")
+				div.slide-banner
+					img(src="img/slider/Foto7.png")
+				//div.slide-banner.second
+					//-img(src="img/friessen-slider-2.jpg")
+						.caption
+							h4 tinas de baño 15% de descuento
+						.space
+	section.quien-es-friessen#nosotros
+		.colContainer
+			.container-img
+				img(src="img/nosotros-1.png").nosotros-1
+				//-.absolute-img
+					img(src="img/quien_es_friessen.jpg")
+			.container-description
+				.description.border
+					.text
+						h2 Nosotros
+						.separator
+						p.
+							Somos una empresa mexicana dedicada a la comercialización de productos para recubrimientos de calidad en las marcas de mayor prestigio tanto a nivel nacional como internacional. Ofreciendo una atención completa, un servicio personalizado y un excelente precio garantizamos la satisfacción de todos nuestros clientes.
+	section.mision-vision
+		.wrapper_friessen
+			.inner_friessen
+				.container
+					h2 Misión
+					p.justify
+						span.rwd-line Ser una empresa determinada a satisfacer siempre las necesidades, 
+						span.rwd-line expectativas y gustos de nuestros clientes a través de la innovación 
+						span.rwd-line constante de nuestros productos y servicios. 
+					.separator
+					.separator
+					h2 Visión
+					p.justify
+						span.rwd-line Ser el principal distribuidor de recubrimientos, ofreciendo invariablemente 
+						span.rwd-line una gran gama de productos innovadores, precios competitivos y un servicio 
+						span.rwd-line personalizado que satisfaga y supere las expectativas de nuestros clientes. 
+					.separator
+					.separator
+					h2 Valores
+					ul.valores
+						li Servicio
+						li Honestidad 
+						li Compromiso 
+						li Seriedad 
+						li Respeto 
+						li Liderazgo
+						li Responsabilidad
+				//-.imgContainerRight
+					img(src="img/friessen-mision.jpg")
+				.wrapper_mision
+					.inner_mision
+						.text
+						
+	.clear
+	
+	section.contacto#contacto
+		.container
+			.col23
+
+				form#contact-form
+					input(placeholder="Nombre" type="text" name="nombre" required id="name")
+					input(placeholder="Correo electrónico" name="email" type="mail" id="correo")
+					input(placeholder="Teléfono" name="telefono" type="text" id="telefono")
+					textarea(placeholder="Mensaje" name="mensaje" required id="mensaje")
+
+					input(type="submit" class="submit")
+				.message
+					span.sended Gracias, enseguida nos pondremos en contacto contigo.
+			.col13
+				h3 Contacto
+				span Teléfonos
+				span (33) 3612-1076 
+				span (33) 3612-1077
+				br
+				span RAMON CORONA NO.681, SANTA ANITA
+
+				ul.social-media
+					li
+						a(href="#" target="_blank")
+							i(class="fa fa-instagram" aria-hidden="true")
+					li
+						a(href="#" target="_blank")
+							i(class="fa fa-facebook-official" aria-hidden="true")
+
+
+	section.map
+		#map
+
+
+block scriptsFooter
+	script(type="text/javascript", src="js/slick.min.js")
+	script(type="text/javascript", src="js/instafeed.js")
+	
+	script.
+		$(document).ready(function(){
+
+			$('.hero').slick({
+				autoplay:true,
+				arrows: false,
+				dots: true,
+				focusOnSelect: true
+
+			});
+
+		});
+	script.
+		function initMap() {
+		var myLatLng = {lat: 20.5559957, lng: -103.45602};
+
+		var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 19,
+		center: myLatLng,
+		scrollwheel: false,
+		});
+
+		var marker = new google.maps.Marker({
+		position: myLatLng,
+		map: map,
+		title: 'Friessen'
+		});
+		}
+		
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYVUSebGqDXcD0f_syywjnlJpejppA9U&callback=initMap" async defer)
+	script.
+		$('#contact-form').submit(function(e){
+
+				e.preventDefault();
+				var formData = $('#contact-form').serialize();
+				$.ajax({
+					type: "POST",
+					url: "form.php",
+					data: formData,
+					success: function(){
+						$('.message').css('display','block');
+						 $('#name').val();
+						 $('#correo').val();
+						 $('#telefono').val();
+						 $('#mensaje').val();
+					}
+
+				}).fail(function(response){
+					console.log('nel');
+				});
+			});
